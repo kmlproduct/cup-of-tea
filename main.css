@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #607d8b;
+}
+
+.container {
+  position: relative;
+  top: 50px;
+}
+
+.container .cup {
+  position: relative;
+  width: 280px;
+  height: 300px;
+  background: -webkit-gradient(linear, left top, right top, from(#f9f9f9), to(#d9d9d9));
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+
+.container .cup .handle {
+  position: absolute;
+  right: -73px;
+  top: 36px;
+  width: 160px;
+  height: 180px;
+  border: 20px solid #e4dddd;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-radius: 50%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.container .cup .top {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, right top, from(#f9f9f9), to(#d9d9d9));
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+}
+
+.container .cup .top .cercle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 50px;
+  background: -webkit-gradient(linear, right top, left top, from(#f9f9f9), to(#d9d9d9));
+  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container .cup .top .cercle .tea {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a57373), to(#d87474));
+  background: linear-gradient(#a57373, #d87474);
+  border-radius: 50%;
+}
+
+.container .cup .top .vapeur {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.container .cup .top .vapeur span {
+  position: relative;
+  bottom: 50px;
+  display: block;
+  margin: 0 2px 50px;
+  min-width: 8px;
+  height: 120px;
+  background: #ffff;
+  border-radius: 50%;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+  -webkit-animation-delay: calc(var(--i) * -0.5s);
+          animation-delay: calc(var(--i) * -0.5s);
+  opacity: 0;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+            transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(-150px) scaleX(5);
+            transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-300px) scaleX(10);
+            transform: translateY(-300px) scaleX(10);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) scaleX(1);
+            transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(-150px) scaleX(5);
+            transform: translateY(-150px) scaleX(5);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-300px) scaleX(10);
+            transform: translateY(-300px) scaleX(10);
+  }
+}
+
+.container .plate {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 500px;
+  height: 200px;
+  background: -webkit-gradient(linear, right top, left top, from(#d4d0d0), to(#8b8787));
+  background: linear-gradient(to left, #d4d0d0, #8b8787);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+}
+
+.container .plate::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+}
+
+.container .plate::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(133, 129, 129, 0.2))), transparent;
+  background: linear-gradient(rgba(133, 129, 129, 0.2) 25%), transparent;
+}
+/*# sourceMappingURL=main.css.map */
